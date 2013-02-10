@@ -1,5 +1,5 @@
 class Zombie < ActiveRecord::Base
   attr_accessible :age, :bio, :name, :rotting
 
-  has_one :brain
+  has_one :brain, dependent: :destroy
 end
